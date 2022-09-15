@@ -28,7 +28,8 @@ Vue.createApp({
 
         removeItem(id) {
             console.log(id);
-            this.todos = this.todos; // apartado 3
+            this.todos = this.todos.filter((todo) => todo.id !== id);   
+            //this.todos = this.todos; // apartado 3
         },
 
         toggleCompleted(id) {
